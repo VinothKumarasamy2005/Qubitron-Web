@@ -10,7 +10,7 @@ const Footer = () => {
       {showModal && <div className="fixed inset-0 bg-gray-900 bg-opacity-50 z-40"></div>}
 
       {/* Footer */}
-      <footer className="bg-black text-white py-6 w-full fixed bottom-0 text-center shadow-lg z-50">
+      <footer className="bg-black text-white py-6 w-full  bottom-0 text-center shadow-lg z-50">
         <div className="container mx-auto flex flex-col items-center">
           {/* Social Icons */}
           <div className="flex space-x-6 mb-2">

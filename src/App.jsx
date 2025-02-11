@@ -4,6 +4,7 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import TechincalEvents from './components/TechincalEvents'
 import NonTechnicalEvents from './components/NonTechnicalEvents'
 import Footer from './components/Footer'
+import CommitteMembers from './components/Committee/CommitteMembers'
 
 function App() {
 
@@ -25,9 +26,11 @@ function App() {
 
 
           {/* http://localhost:5174/workshops */}
-          <Route path='/workshops' element={<NonTechnicalEvents/>}></Route>
+          <Route path='/workshops' element={<NavBar/>}></Route>
 
 
+          {/* http://localhost:5174/committee-members */}
+          <Route path='/committee-members' element={<CommitteMembers/>}></Route>
 
 
           

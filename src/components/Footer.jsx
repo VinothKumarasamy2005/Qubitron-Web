@@ -1,6 +1,6 @@
 import React from "react";
-import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
-
+import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter, FaYoutube, FaMailBulk, FaMailchimp } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-6 w-full fixed bottom-0 text-center  shadow-lg">
@@ -14,7 +14,7 @@ const Footer = () => {
             <FaInstagram className="text-white text-2xl hover:text-pink-500" />
           </a>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            <FaFacebook className="text-white text-2xl hover:text-blue-600" />
+            <CiMail className="text-white text-2xl hover:text-blue-600" />
           </a>
           
 

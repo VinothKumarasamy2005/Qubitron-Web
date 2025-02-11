@@ -31,6 +31,11 @@ const TopLeftNavbar = ({ isOpen, onClose }) => {
             <FaCode size={20} /> WebDevs
           </Link>
         </li>
+        <li>
+          <Link to="/event-timeline" className="flex items-center gap-2 py-2 px-4 hover:bg-gray-700 rounded" onClick={onClose}>
+            <FaCode size={20} /> Timeline
+          </Link>
+        </li>
       </ul>
     </div>
   );

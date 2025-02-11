@@ -5,6 +5,7 @@ import TechincalEvents from './components/TechincalEvents'
 import NonTechnicalEvents from './components/NonTechnicalEvents'
 import Footer from './components/Footer'
 import CommitteMembers from './components/Committee/CommitteMembers'
+import Timeline from './components/Utils/Timeline'
 
 function App() {
 
@@ -31,6 +32,9 @@ function App() {
 
           {/* http://localhost:5174/committee-members */}
           <Route path='/committee-members' element={<CommitteMembers/>}></Route>
+
+          {/* http://localhost:5174/committee-members */}
+          <Route path='/event-timeline' element={<Timeline/>}></Route>
 
 
           

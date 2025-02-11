@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -16,8 +16,10 @@ const Footer = () => {
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
             <FaFacebook className="text-white text-2xl hover:text-blue-600" />
           </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-            <FaTwitter className="text-white text-2xl hover:text-sky-500" />
+          
+
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+            <FaYoutube className="text-white text-2xl hover:text-sky-500" />
           </a>
         </div>
 

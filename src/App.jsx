@@ -1,33 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import NavBar from './components/NavBar'
+import { BrowserRouter,Route,Routes } from 'react-router-dom'
+import TechincalEvents from './components/TechincalEvents'
+import NonTechnicalEvents from './components/NonTechnicalEvents'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <BrowserRouter>
+         <Routes>   
+          {/* http://localhost:5174 */}
+              <Route path='/' element={<NavBar/>}></Route>
+
+          {/* http://localhost:5174/techinal-events */}
+              <Route path='/techincal-events' element={<TechincalEvents/>}></Route>
+
+
+          {/* http://localhost:5174/non-techinal-events */}
+          <Route path='/non-techincal-events' element={<NonTechnicalEvents/>}></Route>
+
+
+
+          {/* http://localhost:5174/workshops */}
+          <Route path='/workshops' element={<NonTechnicalEvents/>}></Route>
+
+
+
+
+          
+ 
+          </Routes>
+  <Footer/>
+    </BrowserRouter>
+      
     </>
   )
 }

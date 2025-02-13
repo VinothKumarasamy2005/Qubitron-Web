@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter, FaEnvelope, FaTimes, FaPaperPlane } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { 
+  FaLinkedin, FaInstagram, FaFacebook, FaTwitter, FaEnvelope, 
+  FaTimes, FaPaperPlane, FaInfoCircle, FaUsers, FaCode, FaHome 
+} from "react-icons/fa";
+import { RiTimeLine } from "react-icons/ri";
 
 const Footer = () => {
   const [showModal, setShowModal] = useState(false);
@@ -9,35 +14,69 @@ const Footer = () => {
       {/* Semi-Transparent Overlay */}
       {showModal && <div className="fixed inset-0 bg-gray-900 bg-opacity-50 z-40"></div>}
 
-      {/* Footer */}
-      <footer className="bg-black text-white py-6 w-full fixed bottom-0 text-center shadow-lg z-50">
-        <div className="container mx-auto flex flex-col items-center">
-          {/* Social Icons */}
-          <div className="flex space-x-6 mb-2">
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="text-white text-2xl hover:text-blue-500" />
-            </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="text-white text-2xl hover:text-pink-500" />
-            </a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <FaFacebook className="text-white text-2xl hover:text-blue-600" />
-            </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <FaTwitter className="text-white text-2xl hover:text-sky-500" />
-            </a>
+      {/* Footer Container */}
+      <footer className="bg-gray-900 text-white py-10 w-full bottom-0 shadow-lg z-50">
+        <div className="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+          
+          {/* About Section */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3">About</h3>
+            <ul className="space-y-2 text-gray-300">
+              <li><Link to="/about-us" className="hover:text-white">About Us</Link></li>
+              <li><Link to="/committee-members" className="hover:text-white">Committee</Link></li>
+              <li><Link to="/web-devs" className="hover:text-white">WebDevs</Link></li>
+              <li><Link to="/event-timeline" className="hover:text-white">Event Timeline</Link></li>
+            </ul>
           </div>
 
-          {/* Contact Us Button and Text */}
-          <div className="flex items-center space-x-4">
-            <button
-              className="font-semibold text-blue-400 hover:underline flex items-center gap-1"
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
+            <ul className="space-y-2 text-gray-300">
+              <li><Link to="/" className="hover:text-white">Home</Link></li>
+              <li><Link to="/technical" className="hover:text-white">Technical</Link></li>
+              <li><Link to="/non-technical" className="hover:text-white">Non-Technical</Link></li>
+              <li><Link to="/workshop" className="hover:text-white">Workshop</Link></li>
+            </ul>
+          </div>
+
+          {/* Social Media */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="text-white text-2xl hover:text-blue-500" />
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="text-white text-2xl hover:text-pink-500" />
+              </a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook className="text-white text-2xl hover:text-blue-600" />
+              </a>
+              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                <FaTwitter className="text-white text-2xl hover:text-sky-500" />
+              </a>
+            </div>
+          </div>
+
+          {/* Contact Section */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Contact</h3>
+            <p className="text-gray-300 mb-2">Email: info@qubitron.com</p>
+            <p className="text-gray-300 mb-4">Phone: +1 234 567 890</p>
+            <button 
+              className="text-blue-400 font-semibold hover:underline flex items-center gap-1"
               onClick={() => setShowModal(true)}
             >
               Contact Us <FaEnvelope />
             </button>
-            <p className="text-lg font-medium">| &copy; Qubitron 2025 All rights reserved</p>
           </div>
+          
+        </div>
+
+        {/* Copyright */}
+        <div className="text-center mt-8 border-t border-gray-700 pt-4 text-gray-400 text-sm">
+          &copy; 2025 Qubitron. All rights reserved.
         </div>
       </footer>
 
@@ -45,7 +84,7 @@ const Footer = () => {
       {showModal && (
         <div className="fixed inset-0 flex justify-center items-center z-50">
           <div className="relative bg-white p-8 rounded-lg shadow-xl w-[450px]">
-            {/* Close Button at Top Right Corner */}
+            {/* Close Button */}
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-3 right-3 text-gray-500 hover:text-red-500"

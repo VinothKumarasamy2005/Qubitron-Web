@@ -6,7 +6,7 @@ import { RiTimeLine } from "react-icons/ri";
 const TopLeftNavbar = ({ isOpen, onClose }) => {
   return (
     <div
-      className={`fixed top-0  left-0 h-full w-64 bg-gray-900 text-white transform ${
+      className={`absolute top-0  left-0 h-full w-64 bg-gray-900 text-white transform ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out sidebar`}
     >

@@ -4,6 +4,7 @@ import member1 from "../../assets/images/member1.jpg";
 import member2 from "../../assets/images/member2.jpg";
 import member3 from "../../assets/images/member3.jpg";
 import member4 from "../../assets/images/member4.jpg";
+import Timer from "../Utils/Timer";
 
 const members = [
   { image: member1, name: "John Doe", year: "Third Year", role: "Event Coordinator" },
@@ -18,6 +19,7 @@ const CommitteeMembers = () => {
   return (
     <>
   <NavBar/>
+  <Timer/>
       <div className="bg-gray-100 text-gray-900 mt-24 min-h-screen flex flex-col items-center overflow-auto">
         <br/>
         <h2 className="text-4xl font-extrabold text-gray-800 mb-2">Committee</h2>

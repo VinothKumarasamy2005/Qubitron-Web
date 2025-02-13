@@ -6,6 +6,7 @@ import staff1 from "../../assets/staff1.jpg";
 import staff2 from "../../assets/staff2.jpg";
 import staff3 from "../../assets/staff3.jpg";
 import NavBar from "../NavBar";
+import Timer from "../Utils/Timer";
 
 const staffMembers = [
   { image: staff1, name: "Dr. John Doe", role: "HOD" },
@@ -20,6 +21,7 @@ const AboutUs = () => {
       <br/>
       <br/>
       <br/>
+      <Timer/>
       <div className="bg-gray-100 text-gray-900 p-10">
         {/* Large Logo & Symposium Description */}
         <section className="flex flex-col md:flex-row items-center text-left gap-10">

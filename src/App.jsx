@@ -8,6 +8,7 @@ import CommitteMembers from './components/Committee/CommitteMembers'
 
 import Timeline from './components/Utils/Timeline'
 import AboutUs from './components/AboutUs/Aboutus'
+import Home from './components/Home'
 
 
 function App() {
@@ -15,10 +16,13 @@ function App() {
 
   return (
     <>
+   
     <BrowserRouter>
+    
+     <NavBar/>
          <Routes>   
           {/* http://localhost:5174 */}
-              <Route path='/' element={<NavBar/>}></Route>
+              <Route path='/' element={<Home/>}></Route> 
 
           {/* http://localhost:5174/techinal-events */}
               <Route path='/techincal-events' element={<TechincalEvents/>}></Route>
@@ -48,6 +52,8 @@ function App() {
  
           </Routes>
 
+<br/>
+<br/>
   <Footer/>
     </BrowserRouter>
       

@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaTimes, FaInfoCircle, FaUsers, FaCode } from "react-icons/fa";
+import { FaTimes, FaInfoCircle, FaUsers, FaCode, FaHome } from "react-icons/fa";
+import { RiTimeLine } from "react-icons/ri";
 
 const TopLeftNavbar = ({ isOpen, onClose }) => {
   return (
     <div
-      className={`fixed top-0 left-0 h-full w-64 bg-gray-900 text-white transform ${
+      className={`fixed top-0  left-0 h-full w-64 bg-gray-900 text-white transform ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out sidebar`}
     >
@@ -15,7 +16,11 @@ const TopLeftNavbar = ({ isOpen, onClose }) => {
       </div>
 
       {/* Sidebar Links */}
-      <ul className="p-4 space-y-4">
+      <ul className="p-4 space-y-4"> <li>
+          <Link to="/" className="flex items-center gap-2 py-2 px-4 hover:bg-gray-700 rounded" onClick={onClose}>
+            <FaHome size={20} /> Home
+          </Link>
+        </li>
         <li>
           <Link to="/about-us" className="flex items-center gap-2 py-2 px-4 hover:bg-gray-700 rounded" onClick={onClose}>
             <FaInfoCircle size={20} /> About Us
@@ -33,7 +38,7 @@ const TopLeftNavbar = ({ isOpen, onClose }) => {
         </li>
         <li>
           <Link to="/event-timeline" className="flex items-center gap-2 py-2 px-4 hover:bg-gray-700 rounded" onClick={onClose}>
-            <FaCode size={20} /> Timeline
+            <RiTimeLine size={20} /> Timeline
           </Link>
         </li>
       </ul>

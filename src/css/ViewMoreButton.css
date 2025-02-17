@@ -1,0 +1,83 @@
+/* ViewMoreButton.css */
+:root {
+    --primary: #1d9bf0; /* Primary color */
+    --padding-hor: 32px; /* Horizontal padding */
+  }
+  
+  .view-more-button {
+    position: relative;
+    color: white; /* Darkened primary color */
+    background: #000; /* Dark background */
+    text-decoration: none;
+    padding: 2px;
+    border-radius: 999px;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    transition: all 150ms ease;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .view-more-button div {
+    position: relative;
+    background: #000; /* Dark background */
+    padding: 12px var(--padding-hor);
+    border-radius: 999px;
+    box-shadow: inset 0 -8px 4px rgba(var(--primary), 0);
+    transition: all 0.2s ease;
+  }
+  
+  .view-more-button::before {
+    content: "";
+    position: absolute;
+    color: var(--primary);
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    box-shadow: 0 24px 32px 2px var(--primary);
+    animation: shinebright 8s linear infinite;
+    transition: all 0.4s ease;
+  }
+  
+  .view-more-button:hover {
+    color: var(--primary);
+  }
+  
+  .view-more-button:hover div {
+    box-shadow: inset 0 -8px 12px rgba(var(--primary), 0.1);
+  }
+  
+  .view-more-button:hover::before {
+    animation-play-state: paused;
+    box-shadow: 0 24px 32px 12px var(--primary);
+  }
+  
+  .view-more-button:active {
+    transform: scale(0.98) translateY(1px);
+  }
+  
+  .view-more-button:active::before {
+    box-shadow: 0 24px 32px 42px var(--primary);
+  }
+  
+  @keyframes shinebright {
+    0% {
+      transform: translateX(0) rotate(0deg);
+    }
+    25% {
+      transform: translateX(calc(-1 * var(--padding-hor))) rotate(90deg);
+    }
+    75% {
+      transform: translateX(var(--padding-hor)) rotate(270deg);
+    }
+    100% {
+      transform: translateX(0) rotate(360deg);
+    }
+  }

@@ -1,0 +1,49 @@
+// DropDown.scss
+$borderRadius: 10px; // Define the variable here
+$spacer: 1rem;
+$primary: #eabd09;
+$text: #fff;
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; // Position below the "Non-Technical" item
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9); // Semi-transparent background
+  border-radius: $borderRadius;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9999; // Increase z-index to ensure it's above the particle background
+  padding: $spacer * 0.5;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+
+  // Horizontal layout
+  display: flex;
+  flex-direction: row; // Align items horizontally
+  gap: $spacer * 1.5; // Add spacing between items
+  min-width: 200px; // Increase width to prevent wrapping
+  white-space: nowrap; // Prevent text from wrapping to the next line
+
+  li {
+    a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: $text;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: rgba($primary, 0.1);
+        color: $primary;
+      }
+    }
+  }
+}
+
+.navbar__item:hover .dropdown-menu {
+  display: flex; // Use flex to align items
+  opacity: 1;
+  visibility: visible;
+}

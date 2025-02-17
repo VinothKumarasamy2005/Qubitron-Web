@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaTimes, FaInfoCircle, FaUsers, FaCode, FaHome } from "react-icons/fa";
 import { RiTimeLine } from "react-icons/ri";
 
-const TopLeftNavbar = ({ isOpen, onClose }) => {
+const TopLeftNavBar = ({ isOpen, onClose }) => {
   return (
     <div
       className={`absolute top-0  left-0 h-full w-64 bg-gray-900 text-white transform ${
@@ -46,4 +46,4 @@ const TopLeftNavbar = ({ isOpen, onClose }) => {
   );
 };
 
-export default TopLeftNavbar;
+export default TopLeftNavBar;

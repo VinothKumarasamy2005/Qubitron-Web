@@ -1,0 +1,145 @@
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
+
+/* Scoped CSS for EventDetails component */
+.event-details-container {
+  --color: rgba(255, 255, 255, 0.9); /* White text for better readability */
+  --bgColor: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  --gold: #ffd700; /* Gold color */
+  --red: #7f1d1d; /* Dark red color */
+
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: "Jura", sans-serif;
+  color: var(--color);
+  background: var(--bgColor);
+  backdrop-filter: blur(5px); /* Add a blur effect to make text readable over particles */
+}
+
+.event-details-container h1 {
+  text-align: center;
+  color: var(--gold); /* Gold color for headings */
+}
+
+/* Event Details Section */
+.event-details-container .event-detail-item {
+  padding: 0.75rem;
+  background: var(--red); /* Dark red background for event details */
+  border: 2px solid var(--gold); /* Gold border */
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--color); /* White text */
+  word-wrap: break-word; /* Prevent text overflow */
+}
+
+.event-details-container .event-detail-item span {
+  color: var(--gold); /* Gold text for labels */
+}
+
+/* Rules and Regulations Section */
+.event-details-container ul {
+  --col-gap: 2rem;
+  --barH: 1rem;
+  --roleH: 2rem;
+  --flapH: 2rem;
+
+  width: min(60rem, 90%);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--col-gap);
+  padding-inline: calc(var(--col-gap) / 2);
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+}
+
+.event-details-container ul li {
+  width: 10em;
+  display: grid;
+  grid-template:
+    "role"
+    "icon"
+    "title"
+    "descr";
+  align-items: flex-start;
+  gap: 1rem;
+  padding-block-end: calc(var(--flapH) + 1rem);
+  text-align: center;
+  background: var(--red); /* Dark red background for cards */
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.6) var(--roleH),
+    rgba(0, 0, 0, 0.4) calc(var(--roleH) + 0.5rem),
+    rgba(0, 0, 0, 0) calc(var(--roleH) + 0.5rem + 5rem)
+  );
+  clip-path: polygon(
+    calc(var(--col-gap) / -2 - 5px) 0,
+    calc(100% + var(--col-gap) / 2 + 5px) 0,
+    calc(100% + var(--col-gap) / 2 + 5px ) calc(100% - var(--flapH)),
+    50% 100%,
+    calc(var(--col-gap) / -2 - 5px) calc(100% - var(--flapH))
+  );
+  border: 2px solid var(--gold); /* Gold border for cards */
+}
+
+/* bar */
+.event-details-container ul li::before {
+  content: "";
+  grid-area: role;
+  height: var(--barH);
+  width: calc(100% + var(--col-gap));
+  margin-left: calc(var(--col-gap) / -2);
+  margin-top: calc(var(--roleH) / 2 - var(--barH) / 2);
+  background: var(--gold); /* Gold color for the bar */
+  z-index: -1;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+/* role */
+.event-details-container ul li::after {
+  content: "";
+  grid-area: role;
+  background: var(--red); /* Dark red background for the role */
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.4)
+  );
+  height: var(--roleH);
+}
+
+.event-details-container ul li .icon,
+.event-details-container ul li .title,
+.event-details-container ul li .descr {
+  padding-inline: 1rem;
+  color: var(--gold); /* Gold text for icons, titles, and descriptions */
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.event-details-container ul li .icon {
+  font-size: 3rem;
+}
+
+.event-details-container ul li .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.event-details-container ul li .descr {
+  font-size: 0.9rem;
+  color: var(--color); /* White text for descriptions */
+  word-wrap: break-word; /* Prevent text overflow */
+}

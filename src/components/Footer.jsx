@@ -1,146 +1,132 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { 
-  FaLinkedin, FaInstagram, FaFacebook, FaTwitter, FaEnvelope, 
-  FaTimes, FaPaperPlane, FaInfoCircle, FaUsers, FaCode, FaHome 
-} from "react-icons/fa";
-import { RiTimeLine } from "react-icons/ri";
+import React from 'react';
+import img from '../images/qubitgold.png'; // Replace with your actual image path
+import '../css/Footer.css'; // Import the CSS file
+import '../css/Footer.scss'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const [showModal, setShowModal] = useState(false);
-
   return (
-    <>
-      {/* Semi-Transparent Overlay */}
-      {showModal && <div className="fixed inset-0 bg-gray-900 bg-opacity-50 z-40"></div>}
-
-      {/* Footer Container */}
-      <footer className="bg-gray-900 text-white py-10 w-full bottom-0 shadow-lg z-50">
-        <div className="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
-          
-          {/* About Section */}
-          <div>
-            <h3 className="text-lg font-semibold mb-3">About</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li><Link to="/about-us" className="hover:text-white">About Us</Link></li>
-              <li><Link to="/committee-members" className="hover:text-white">Committee</Link></li>
-              <li><Link to="/web-devs" className="hover:text-white">WebDevs</Link></li>
-              <li><Link to="/event-timeline" className="hover:text-white">Event Timeline</Link></li>
-            </ul>
+    <div className="relative overflow-hidden">
+      {/* Overlapping CTA Section */}
+      <div className="flex justify-center items-center">
+        <div className="w-2/3 rounded-xl py-16 px-8 relative shadow-lg flex flex-col items-start your-pattern-class">
+          <h2 className="text-3xl font-semibold bg-gradient-to-r from-slate-700 via-yellow-500 to-gray-600 bg-clip-text text-transparent">
+            Ready to get started?
+          </h2>
+          <p className="mt-10 text-3xl bg-gradient-to-r from-gray-800 to-yellow-500 text-transparent bg-clip-text">
+            Talk to us today
+          </p>
+          <div className="mt-6 ml-auto">
+            <button className="px-10 py-3 bg-yellow-500 text-black rounded-full font-semibold hover:bg-slate-500 hover:text-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-900 focus:ring-opacity-50">
+              Get started
+            </button>
           </div>
+        </div>
+      </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li><Link to="/" className="hover:text-white">Home</Link></li>
-              <li><Link to="/technical" className="hover:text-white">Technical</Link></li>
-              <li><Link to="/non-technical" className="hover:text-white">Non-Technical</Link></li>
-              <li><Link to="/workshop" className="hover:text-white">Workshop</Link></li>
-            </ul>
-          </div>
-
-          {/* Social Media */}
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
-            <div className="flex space-x-4">
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="text-white text-2xl hover:text-blue-500" />
-              </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="text-white text-2xl hover:text-pink-500" />
-              </a>
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="text-white text-2xl hover:text-blue-600" />
-              </a>
-              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="text-white text-2xl hover:text-sky-500" />
-              </a>
+      {/* Main Footer */}
+      <div className="bg-gray-900 mt-[-9rem] pt-20 pb-10 px-6 lg:px-8">
+        <div className="container mx-auto">
+          {/* Footer Links */}
+          <div className="lg:flex justify-evenly items-start mt-48 flex-grow">
+            <div className="lg:w-1/4 mb-6 lg:mb-0 sm:mr-0 sm:w-1/2 pl-20">
+              <img src={img} alt="logo" className="w-full h-auto brightness-90 " style={{ maxWidth: '200px' }} />
+            </div>
+            <div className="lg:w-1/4 mb-6 lg:mb-0 contact-heading-container">
+              <h6 className="mb-4 font-bold contact-heading pb-10">
+                <span>
+                  <a href="#" className="uppercase hover:text-yellow-500 text-gray-400">
+                    What we do?
+                  </a>
+                </span>
+              </h6>
+              <ul>
+                <li className="mb-2 mt-3">
+                  <a href="#" className="hover:text-yellow-500 text-gray-500">
+                    Web App
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="#" className="hover:text-yellow-500 text-gray-500">
+                    Research and Development
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="#" className="hover:text-yellow-500 text-gray-500">
+                    Testing
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="lg:w-1/4 mb-6 lg:mb-0 contact-heading-container">
+              <h6 className="mb-4 font-bold contact-heading">
+                <span>
+                  <a href="#" className="uppercase hover:text-yellow-500 text-gray-400">
+                    Who we are?
+                  </a>
+                </span>
+              </h6>
+              <ul>
+                <li className="mb-2 mt-3">
+                  <a href="#" className="hover:text-yellow-500 text-gray-500">
+                    <Link to="/home">Home</Link>
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="#" className="hover:text-yellow-500 text-gray-500">
+                    <Link to="/careers">Careers</Link>
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="#" className="hover:text-yellow-500 text-gray-500">
+                    <Link to="/about">About</Link>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="lg:w-1/4 mb-6 lg:mb-0 contact-heading-container">
+              <h6 className="mb-4 font-bold contact-heading">
+                <span>
+                  <a href="#" className="uppercase hover:text-yellow-500 text-gray-400">
+                    Infinest Tech
+                  </a>
+                </span>
+              </h6>
+              <ul>
+                <li className="mb-2 mt-3">
+                  <a href="#" className="hover:text-yellow-500 text-gray-500">
+                    infinest@gmail
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="#" className="hover:text-yellow-500 text-gray-500">
+                    91+ 96009 25477
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="#" className="hover:text-yellow-500 text-gray-500">
+                    Coimbatore
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
 
-          {/* Contact Section */}
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Contact</h3>
-            <p className="text-gray-300 mb-2">Email: info@qubitron.com</p>
-            <p className="text-gray-300 mb-4">Phone: +1 234 567 890</p>
-            <button 
-              className="text-blue-400 font-semibold hover:underline flex items-center gap-1"
-              onClick={() => setShowModal(true)}
-            >
-              Contact Us <FaEnvelope />
-            </button>
-          </div>
-          
-        </div>
-
-        {/* Copyright */}
-        <div className="text-center mt-8 border-t border-gray-700 pt-4 text-gray-400 text-sm">
-          &copy; 2025 Qubitron. All rights reserved.
-        </div>
-      </footer>
-
-      {/* Contact Us Modal */}
-      {showModal && (
-        <div className="fixed inset-0 flex justify-center items-center z-50">
-          <div className="relative bg-white p-8 rounded-lg shadow-xl w-[450px]">
-            {/* Close Button */}
-            <button
-              onClick={() => setShowModal(false)}
-              className="absolute top-3 right-3 text-gray-500 hover:text-red-500"
-            >
-              <FaTimes className="text-xl" />
-            </button>
-
-            {/* Modal Header */}
-            <div className="flex justify-center items-center mb-6">
-              <h2 className="text-xl font-bold flex items-center gap-2 text-center">
-                <FaEnvelope className="text-blue-500" /> Contact Us
-              </h2>
+          {/* Social Icons */}
+          <div className="social-container text-center mx-auto">
+            <ul className="social-icons">
+              <li><a href="#"><i className="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
+              <li><a target='_blank' href="https://wa.me/916382633918"><i className="fa fa-whatsapp  "></i></a></li>
+            </ul>
+            <div className="text-center text-gray-500 mt-10">
+              © 2024 Infinest Tech. All rights reserved.
             </div>
-
-            {/* Contact Form */}
-            <form>
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full p-3 border rounded-md mb-5"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full p-3 border rounded-md mb-5"
-              />
-              <input
-                type="text"
-                placeholder="College"
-                className="w-full p-3 border rounded-md mb-5"
-              />
-              <input
-                type="tel"
-                placeholder="Phone No"
-                className="w-full p-3 border rounded-md mb-5"
-              />
-              <textarea
-                placeholder="Your Queries..."
-                className="w-full p-3 border rounded-md mb-5"
-                rows="4"
-              ></textarea>
-
-              {/* Centered Submit Button */}
-              <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="bg-blue-500 text-white px-5 py-2 rounded-md flex items-center gap-2 hover:bg-blue-600"
-                >
-                  <FaPaperPlane /> Submit
-                </button>
-              </div>
-            </form>
           </div>
         </div>
-      )}
-    </>
+      </div>
+    </div>
   );
 };
 

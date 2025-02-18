@@ -1,88 +1,145 @@
-/* OnlineEvents.css */
 .online-events-container {
     display: flex;
     height: 100vh;
     overflow: hidden;
-    gap: 10rem; /* Gap between left and right sides */
-    padding: 2rem; /* Add padding to the container */
-  }
-  
-  /* Left Side: Active Item */
-  .active-item-container {
+    gap: 10rem;
+    padding: 2rem;
+}
+
+/* Left Side: Active Item */
+.active-item-container {
     width: 45%;
-    height: 15rem; /* Fixed height */
+    height: 15rem;
     padding: 1rem;
     display: flex;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto;
     flex-direction: column;
     margin-top: 12rem;
-    align-items: center; /* Center horizontally inside */
-    justify-content: center; /* Center vertically inside */
+    align-items: center;
+    justify-content: center;
     background-color: #f9f9f9;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-  
-  .active-item-image {
+.active-item-image {
     width: 100%;
-    max-width: 100px; /* Adjust image size */
+    max-width: 100px;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
-  }
-  
-  .active-item-title {
+}
+
+.active-item-title {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: #333;
-  }
-  
-  .active-item-content {
+}
+
+.active-item-content {
     font-size: 0.875rem;
     color: #666;
     text-align: center;
-  }
-  
-  .placeholder-text {
+}
+
+.placeholder-text {
     font-size: 1rem;
     color: #999;
-  }
-  
-  /* Right Side: Moving Images */
-  .scroll-container {
+}
+
+/* Right Side: Moving Images */
+.scroll-container {
     width: 35%;
     display: flex;
-    gap: 2rem; /* Gap between columns */
+    gap: 2rem;
     overflow: hidden;
-  }
-  
-  .scroll-column {
+}
+
+.scroll-column {
     width: 40%;
     animation: scroll 20s linear infinite;
-  }
-  
-  .scroll-item {
-    margin-bottom: 2rem; /* Vertical gap between images */
+}
+
+.scroll-item {
+    margin-bottom: 2rem;
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
-  
-  .scroll-item:hover {
+}
+
+.scroll-item:hover {
     transform: scale(1.05);
-  }
-  
-  .scroll-item-image {
+}
+
+.scroll-item-image {
     width: 100%;
     border-radius: 0.5rem;
-  }
-  
-  /* Animation for Scrolling */
-  @keyframes scroll {
+}
+
+/* Animation for Scrolling */
+@keyframes scroll {
     0% {
-      transform: translateY(0%);
+        transform: translateY(0%);
     }
     100% {
-      transform: translateY(-50%);
+        transform: translateY(-50%);
     }
-  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .online-events-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        height: auto;
+    }
+
+    .active-item-container {
+        width: 80%;
+        height: auto;
+        margin-top: 3rem;
+        padding: 1.5rem;
+    }
+
+    .active-item-image {
+        max-width: 80px;
+    }
+
+    .scroll-container {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .scroll-column {
+        width: 100%;
+        animation-duration: 15s;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .online-events-container {
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .active-item-container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .active-item-image {
+        max-width: 60px;
+    }
+
+    .scroll-container {
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .scroll-item {
+        margin-bottom: 1rem;
+    }
+}

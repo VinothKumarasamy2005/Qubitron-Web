@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import img2 from '../images/Melody master.png'; // Replace with your actual image paths
+import img2 from '../images/Melody master.png'; // Replace with actual image paths
 import img3 from '../images/Meme_magnus.png';
 import img4 from '../images/Shutter stock.png';
 import img5 from '../images/artophobia.png';
@@ -15,7 +15,6 @@ const items = [
   { id: 5, image: img6, title: 'Funk Fusion', content: 'In the rapidly evolving landscape of the digital age, the concept of digital ideas represents the cornerstone of innovation and transformation.' },
 ];
 
-// Shuffle the items for random order
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -27,7 +26,6 @@ const shuffleArray = (array) => {
 const shuffledItems1 = shuffleArray([...items]);
 const shuffledItems2 = shuffleArray([...items]);
 
-// Duplicate the items for seamless looping effect
 const duplicatedItems1 = [...shuffledItems1, ...shuffledItems1];
 const duplicatedItems2 = [...shuffledItems2, ...shuffledItems2];
 
@@ -40,7 +38,6 @@ const OnlineEvents = () => {
 
   return (
     <div className="online-events-container">
-      {/* Left Side: Display Active Item */}
       <div className="active-item-container">
         {activeItem ? (
           <>
@@ -53,26 +50,17 @@ const OnlineEvents = () => {
         )}
       </div>
 
-      {/* Right Side: Moving Images */}
       <div className="scroll-container">
         <div className="scroll-column">
           {duplicatedItems1.map((item, index) => (
-            <div
-              key={`${item.id}-${index}`}
-              className="scroll-item"
-              onClick={() => handleClick(item)}
-            >
+            <div key={`${item.id}-${index}`} className="scroll-item" onClick={() => handleClick(item)}>
               <img src={item.image} alt={item.title} className="scroll-item-image" />
             </div>
           ))}
         </div>
         <div className="scroll-column">
           {duplicatedItems2.map((item, index) => (
-            <div
-              key={`${item.id}-${index}`}
-              className="scroll-item"
-              onClick={() => handleClick(item)}
-            >
+            <div key={`${item.id}-${index}`} className="scroll-item" onClick={() => handleClick(item)}>
               <img src={item.image} alt={item.title} className="scroll-item-image" />
             </div>
           ))}

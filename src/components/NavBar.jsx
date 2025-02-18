@@ -127,49 +127,15 @@
 //               <FaGamepad size={22} /> Non-Technical
 //               <ul className="ml-4 mt-2">
 //                 <li>
-//                   <Link to="/offline-events" className="block py-1 hover:bg-gray-700">
-//                     Offline Events
-//                   </Link>
-//                 </li>
-//                 <li>
-//                   <Link to="/online-events" className="block py-1 hover:bg-gray-700">
-//                     Online Events
-//                   </Link>
-//                 </li>
-//               </ul>
-//             </div>
-//             <Link to="/workshops" className='text-2xl my-10 cursor-pointer' onClick={toggleMobileNav}>
-//               <FaTools size={22} /> Workshop
-//             </Link>
-//             <button onClick={handleDownload} className='text-2xl my-10 cursor-pointer'>
-//               <FaDownload size={22} /> Download Brochure
-//             </button>
-//           </div>
-//         </nav>
+//       
 
-//         {/* Mobile Menu Toggle */}
-//         <i className="fa-solid fa-bars fa-2xl ml-auto text-yellow-600 md:hidden cursor-pointer" onClick={toggleMobileNav}></i>
-//       </div>
-//     </>
-//   );
-// };
 
-// const NavItem = ({ link, label, icon }) => (
-//   <li className="navbar__item">
-//     <Link to={link} className="navbar__link">
-//       {icon}
-//       <span>{label}</span>
-//     </Link>
-//   </li>
-// );
-
-// export default NavBar;
 
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaLaptopCode, FaGamepad, FaTools, FaDownload, FaBars } from "react-icons/fa";
-import TopLeftNavBar from "./TopLeftNavbar"; // Sidebar Component
+
 import brochure from "../assets/NIS.pdf";
 import "../css/NavBar.scss"; // Import the SCSS file
 import img from "../images/qubitgold.png";
@@ -218,8 +184,8 @@ const NavBar = () => {
 
   return (
     <>
-      {/* Sidebar */}
-      <TopLeftNavBar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      {/* Sidebar 
+      <TopLeftNavBar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />*/}
 
       <div className="header relative md:mb-[5rem]">
         {/* Logo */}
@@ -269,6 +235,34 @@ const NavBar = () => {
                 onMouseEnter={() => setShowTooltip(true)}
                 onMouseLeave={() => setShowTooltip(false)}
               >
+                 <NavItem link="/about-us" label="AboutUs" icon={<FaLaptopCode size={22} />} />
+            {/* Non-Technical Events Dropdown */}
+            <li
+              className="navbar__item relative"
+              onMouseEnter={() => setNonTechDropdownOpen(true)} // Open mdropdown on hover
+              onMouseLeave={() => setNonTechDropdownOpen(false)} // Close dropdown on mouse leave
+            ></li>
+             <NavItem link="/web-devs" label="WebDevs" icon={<FaLaptopCode size={22} />} />
+            {/* Non-Technical Events Dropdown */}
+            <li
+              className="navbar__item relative"
+              onMouseEnter={() => setNonTechDropdownOpen(true)} // Open dropdown on hover
+              onMouseLeave={() => setNonTechDropdownOpen(false)} // Close dropdown on mouse leave
+            ></li>
+             <NavItem link="/committee-members" label="Committee" icon={<FaLaptopCode size={22} />} />
+            {/* Non-Technical Events Dropdown */}
+            <li
+              className="navbar__item relative"
+              onMouseEnter={() => setNonTechDropdownOpen(true)} // Open dropdown on hover
+              onMouseLeave={() => setNonTechDropdownOpen(false)} // Close dropdown on mouse leave
+            ></li>
+             <NavItem link="/event-timeline" label="TimeLine" icon={<FaLaptopCode size={22} />} />
+            {/* Non-Technical Events Dropdown */}
+            <li
+              className="navbar__item relative"
+              onMouseEnter={() => setNonTechDropdownOpen(true)} // Open dropdown on hover
+              onMouseLeave={() => setNonTechDropdownOpen(false)} // Close dropdown on mouse leave
+            ></li>
                 <button onClick={handleDownload} className="navbar__link">
                   <FaDownload size={22} />
                 </button>
@@ -282,7 +276,7 @@ const NavBar = () => {
           </ul>
         </nav>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation
         <nav className={`navbar-mob md:hidden absolute top-0 bg-gray-800 p-10 text-gray-200 h-screen w-[70%] transition-all duration-300 ease-in-out ${isMobileNavVisible ? 'right-0' : 'right-full'}`}>
           <span className='absolute top-5 left-5 cursor-pointer' onClick={toggleMobileNav}>
             <i className="fa-regular fa-2xl fa-circle-xmark"></i>
@@ -292,7 +286,7 @@ const NavBar = () => {
               <FaLaptopCode size={22} /> Technical
             </Link>
             {/* Non-Technical Events Dropdown for Mobile */}
-            <div className="text-2xl my-10 cursor-pointer" onClick={toggleMobileNav}>
+            {/* <div className="text-2xl my-10 cursor-pointer" onClick={toggleMobileNav}>
               <FaGamepad size={22} /> Non-Technical
               <ul className="ml-4 mt-2">
                 <li>
@@ -314,10 +308,10 @@ const NavBar = () => {
               <FaDownload size={22} /> Download Brochure
             </button>
           </div>
-        </nav>
+        </nav> */} 
 
         {/* Mobile Menu Toggle */}
-        <i className="fa-solid fa-bars fa-2xl ml-auto text-yellow-600 md:hidden cursor-pointer" onClick={toggleMobileNav}></i>
+      {/*  <i className="fa-solid fa-bars fa-2xl ml-auto text-yellow-600 md:hidden cursor-pointer" onClick={toggleMobileNav}></i> */}
       </div>
     </>
   );

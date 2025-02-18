@@ -14,7 +14,7 @@ import ParticleBackground from './components/ParticleBackground';
 import EventDetails from './components/EventDetails';
 import OfflineEvents from './components/OfflineEvents';
 import OnlineEvents from './components/OnlineEvents';
-// import WebDev from './components/Committee/WebDev';
+import WebDev from './components/Committee/WebDev';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -38,7 +38,7 @@ function App() {
               <Route path="/offline-events" element={<OfflineEvents />} />
               <Route path="/online-events" element={<OnlineEvents />} />
               <Route path='/about-us' element={<AboutUs />} />
-              {/* <Route path='/web-devs' element={<WebDev />} /> */}
+             <Route path='/web-devs' element={<WebDev/>} /> 
             </Routes>
             <br />
             <br />

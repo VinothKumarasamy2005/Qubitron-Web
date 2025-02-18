@@ -10,7 +10,7 @@ const timelineData = [
   { date: "May 30, 2024", event: "Beta Release" },
   { date: "Jun 20, 2024", event: "Global Launch" },
   { date: "July 1, 2024  9.00Am", event: "Post Launch Review" },
-  { date: "Aug 15, 2024", event: "Product Enhnhajdguygefyejancement" },
+  { date: "Aug 15, 2024", event: "Product Enhancement" },
   { date: "March 12, 9:00 AM", event: "Event" },
   { date: "Feb 12, 2024", event: "Team Expansion" },
   { date: "Mar 18, 2024", event: "Development Phase" },
@@ -53,10 +53,10 @@ const Timeline = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 w-full z-50">
-      
-      </div>
-      <br /><br /><br />
+      <div className="fixed top-0 left-0 w-full z-50"></div>
+      <br />
+      <br />
+      <br />
 
       <div
         id="timeline-container"
@@ -74,7 +74,6 @@ const Timeline = () => {
             top: lineTop + "px",
             height: lineHeight + "px",
           }}
-          
         ></div>
 
         <div className="relative flex flex-col items-center w-full z-10">
@@ -82,14 +81,23 @@ const Timeline = () => {
             <div
               key={index}
               className={`relative flex w-full items-center py-12 ${
-                index % 2 === 0 ? "justify-end pr-120" : "justify-start pl-120"
+                index % 2 === 0
+                  ? "justify-end pr-24 sm:pr-20 md:pr-16 lg:pr-120"
+                  : "justify-start pl-24 sm:pl-20 md:pl-16 lg:pl-120"
               }`}
-              ref={index === 0 ? firstEventRef : index === timelineData.length - 1 ? lastEventRef : null}
+              ref={
+                index === 0
+                  ? firstEventRef
+                  : index === timelineData.length - 1
+                  ? lastEventRef
+                  : null
+              }
             >
               <div className="arrow-icon absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-xl">
                 {index % 2 === 0 ? (
                   <FaArrowRight className="text-white text-lg" />
                 ) : (
+            
                   <FaArrowLeft className="text-white text-lg" />
                 )}
               </div>

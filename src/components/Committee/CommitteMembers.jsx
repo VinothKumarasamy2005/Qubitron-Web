@@ -18,7 +18,7 @@ const members = [
 const CommitteeMembers = () => {
   return (
     <>
-  <NavBar/>
+  
   <Timer/>
       <div className="bg-gray-100 text-gray-900 mt-24 min-h-screen flex flex-col items-center overflow-auto">
         <br/>

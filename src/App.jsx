@@ -26,7 +26,7 @@ function App() {
         <div className="flex">
           <TopLeftNavbar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
           <div className={`w-full transition-all duration-300 ${isSidebarOpen ? 'ml-64' : 'ml-0'}`}>
-            <NavBar />
+          <NavBar />
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/techincal-events' element={<TechincalEvents />} />

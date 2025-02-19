@@ -30,10 +30,9 @@ const AboutUs = () => {
               Our Symposium - QUBITRON
             </h1>
             <p className="text-lg mt-4 leading-relaxed text-gray-600">
-              <strong>QUBITRON</strong> is a national-level symposium by the
-              Computer Science and Engineering department of CIT. From
-              hackathons to tech talks, this event is a gateway to innovation
-              and knowledge-sharing.
+              <strong>QUBITRON</strong>  is a National-level technical symposium organized by the Electronics and Communication Engineering (ECE) Department of Coimbatore Institute of Technology. Inspired by the fusion of Quantum Computing and Electronics, Qubitron serves as a dynamic platform for students to explore emerging technologies, exchange ideas, and enhance their technical expertise.
+
+The symposium features a diverse lineup of technical and non-technical events, hands-on workshops, and expert sessions, fostering an environment of learning, innovation, and collaboration. With engaging competitions, insightful discussions, and cutting-edge technological showcases, Qubitron aims to bring together some of the brightest minds to push the frontiers of engineering and technology.
             </p>
           </div>
         </motion.section>
@@ -57,9 +56,8 @@ const AboutUs = () => {
               About Our Department
             </h2>
             <p className="text-lg mt-4 leading-relaxed text-gray-600">
-              The Department of Electronics and Communication Engineering was
-              started in the year 1968. Currently, it offers undergraduate,
-              postgraduate, and research programs.
+            The Department of Electronics and Communication Engineering was started in the year 1968. Currently the department offers undergraduate – B.E Electronics and Communication Engineering (Full time), post graduate – M.E Communication Engineering (Full Time and Part Time) and research (Full Time and Part Time) programmes.
+            The department has produced 20 doctorates in the area of Signal processing, Wireless Communication, Networking, Wireless sensor Networks, Image processing, VLSI Design and Embedded systems. The faculty members of the department have undertaken innovative projects from leading agencies such as AICTE, UGC, DST.
             </p>
           </div>
         </motion.section>
@@ -83,9 +81,8 @@ const AboutUs = () => {
               Our College
             </h2>
             <p className="text-lg mt-4 leading-relaxed text-gray-600">
-              Founded in 1990, our college is a pioneer in higher education,
-              empowering students through research, industry exposure, and
-              innovation.
+            The V. Rangasamy Naidu Educational Trust devoted to the cause of promoting technical and scientific literacy, established Coimbatore Institute of Technology (CIT) in Coimbatore, Tamil Nadu, South India in 1956.
+            CIT is one of the most reputed and prestigious educational institutions in India. The Institute backed by World Class research and development over the years attained autonomous status in 1987.
             </p>
           </div>
         </motion.section>
@@ -110,17 +107,18 @@ const AboutUs = () => {
               {
                 title: "Technical Events",
                 description:
-                  "Coding challenges, AI & ML competitions, and robotics hackathons.",
+                  "Designed to enhance problem-solving and technical skills, these events challenge students in circuit design, coding, and real-world engineering tasks. They bridge the gap between theory and practical application, preparing participants for the evolving tech landscape.",
               },
               {
                 title: "Workshops",
                 description:
-                  "Hands-on sessions on trending technologies like blockchain, cybersecurity, and IoT.",
+                  "Hands-on sessions by industry experts offering insights into emerging technologies like IoT, AI, Embedded Systems, and Quantum Computing. These workshops provide practical exposure beyond classroom learning, ensuring participants stay ahead in the tech world.",
               },
+              
               {
-                title: "Guidelines to Register",
+                title: "Guidelines",
                 description:
-                  "Register online, submit your project details, and confirm participation via email.",
+                  "Participants must register in advance and be punctual for all events. Professionalism and ethical conduct are expected throughout the symposium. Judging will be based on creativity, accuracy, and problem-solving skills, and all decisions by judges and organizers are final. Give your best and make Qubitron 2K25 a great success!",
               },
             ].map((event, index) => (
               <motion.div

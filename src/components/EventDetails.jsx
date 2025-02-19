@@ -37,6 +37,9 @@ const EventDetails = () => {
             <div className="event-detail-item">
               <span className="font-semibold text-gold">Prize:</span> {eventDetails?.prize}
             </div>
+            <div className="event-detail-item">
+              <span className="font-semibold text-gold">Registration Fee:</span> {eventDetails?.fee}
+            </div>
           </div>
         </div>
 
@@ -53,6 +56,17 @@ const EventDetails = () => {
             ))}
           </ul>
         </div>
+        <div className="flex justify-center mt-4">
+  <button 
+    onClick={() => window.open(eventDetails.gform, "_blank")}
+    style={{ '--accent-color': '#7f1d1d' }}
+    className="px-6 py-2  text-white font-semibold rounded-lg shadow-md border-2 border-yellow-400 hover:bg-red-700 transition duration-300 ease-in-out"
+  >
+    Register
+  </button>
+</div>
+
+
       </div>
     </div>
   );

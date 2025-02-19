@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import img2 from '../images/Melody master.png'; // Replace with actual image paths
-import img3 from '../images/Meme_magnus.png';
+
 import img4 from '../images/Shutter stock.png';
 import img5 from '../images/artophobia.png';
-import img6 from '../images/Funk fusion.png';
+
 
 import '../css/OnlineEvents.css'; // Import the CSS file
 
 const items = [
-  { id: 1, image: img2, title: 'Melody Master', content: 'In the rapidly evolving landscape of the digital age, the concept of digital ideas represents the cornerstone of innovation and transformation.' },
-  { id: 2, image: img3, title: 'Meme Magnus', content: 'Testing involves rigorous evaluation under various conditions to identify potential issues.' },
-  { id: 3, image: img4, title: 'Shutter Stock', content: 'Client satisfaction stands as a pivotal benchmark for the success of any business.' },
-  { id: 4, image: img5, title: 'Artophobia', content: 'Providing unparalleled 24x7 support to our clients.' },
-  { id: 5, image: img6, title: 'Funk Fusion', content: 'In the rapidly evolving landscape of the digital age, the concept of digital ideas represents the cornerstone of innovation and transformation.' },
+  { id: 1, image: img2, title: 'SINGING', content: 'An online event to showcase the singing talent.' },
+  { id: 3, image: img5, title: 'ARTOPHOBIA', content: '"Arto Phobia" is an online art contest exclusively for undergraduate and postgraduate students from any institute. Participants are invited to submit photos of their physical artworks, which will be showcased on our official Instagram page. The artwork that garners the highest number of likes will be declared the winner.' },
+  { id: 4, image: img5, title: 'DANCE', content: 'Funk Fusion is an online event where students record their dance videos and upload them using the Google Form provided on the symposium website. The videos will then be posted on the Instagram page ‘ @qubitron__2k25 ’ The videos that receive the most likes will be announced as the winners.' },
+  { id: 5, image: img4, title: 'SHUTTER STOCK', content: 'Shutter shock is an online event where the photograph of yours will be posted in Instagram and the maximum liked photograph will be announced as the winner.' },
+  
 ];
 
 const shuffleArray = (array) => {
